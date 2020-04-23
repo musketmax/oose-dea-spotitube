@@ -1,0 +1,50 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="spotitube-api:war exploded">
+    <output-path>$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>spotitube-api</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="spotitube-api" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-catalina:8.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-servlet-api:8.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-jsp-api:8.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-el-api:8.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-juli:8.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-annotations-api:8.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-api:8.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-jni:8.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-coyote:8.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-util:8.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-util-scan:8.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpclient:4.5.9" />
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.4.11" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.15" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.6.1" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.10" />
+          <element id="library" level="project" name="Maven: org.mockito:mockito-core:3.3.3" />
+          <element id="library" level="project" name="Maven: net.bytebuddy:byte-buddy:1.10.5" />
+          <element id="library" level="project" name="Maven: net.bytebuddy:byte-buddy-agent:1.10.5" />
+          <element id="library" level="project" name="Maven: org.objenesis:objenesis:2.6" />
+          <element id="library" level="project" name="Maven: net.bytebuddy:byte-buddy-android:1.10.5" />
+          <element id="library" level="project" name="Maven: com.jakewharton.android.repackaged:dalvik-dx:1" />
+          <element id="library" level="project" name="Maven: com.jakewharton.android.repackaged:libcore-dex:2" />
+          <element id="library" level="project" name="Maven: com.googlecode.json-simple:json-simple:1.1" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="spotitube-api/web/Web" />
+    </root>
+  </artifact>
+</component>
