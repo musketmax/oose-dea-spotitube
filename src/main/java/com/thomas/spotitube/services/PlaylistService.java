@@ -1,7 +1,9 @@
 package com.thomas.spotitube.services;
 
 import com.thomas.spotitube.data.constants.HttpMessageConstants;
+import com.thomas.spotitube.domain.Playlist;
 import com.thomas.spotitube.domain.User;
+import com.thomas.spotitube.exceptions.ServerErrorException;
 import com.thomas.spotitube.exceptions.TokenInvalidException;
 import com.thomas.spotitube.logic.interfaces.IPlaylistLogic;
 import com.thomas.spotitube.logic.interfaces.ITrackLogic;
@@ -22,12 +24,13 @@ public class PlaylistService implements IPlaylistService {
     @Inject
     private ITrackLogic trackLogic;
 
-    public Response playlists(String token) {
+    @Override
+    public Response get(String token) {
         try {
             userLogic.validateToken(token);
             User user = userLogic.getUser(token);
 
-            JSONObject playlists = playlistLogic.getPlaylists(user.getId());
+            JSONObject playlists = playlistLogic.getPlaylistsForUser(user.getId());
 
             return Response
                     .status(Response.Status.OK)
@@ -42,8 +45,78 @@ public class PlaylistService implements IPlaylistService {
     }
 
     @Override
-    public Response playlist(String token, int playlistId) {
-        return null;
+    public Response create(String token, Playlist playlist) {
+        try {
+            userLogic.validateToken(token);
+            User user = userLogic.getUser(token);
+
+            JSONObject playlists = playlistLogic.addPlaylist(user.getId(), playlist);
+
+            return Response
+                    .status(Response.Status.OK)
+                    .entity(playlists)
+                    .build();
+        } catch (TokenInvalidException e) {
+            return Response
+                    .status(Response.Status.UNAUTHORIZED)
+                    .entity(HttpMessageConstants.NOT_AUTHORIZED)
+                    .build();
+        } catch (ServerErrorException e) {
+            return Response
+                    .status(Response.Status.INTERNAL_SERVER_ERROR)
+                    .entity(HttpMessageConstants.INTERNAL_SERVER_ERROR)
+                    .build();
+        }
+    }
+
+    @Override
+    public Response update(String token, Playlist playlist) {
+        try {
+            userLogic.validateToken(token);
+            User user = userLogic.getUser(token);
+
+            JSONObject playlists = playlistLogic.updatePlaylist(user.getId(), playlist);
+
+            return Response
+                    .status(Response.Status.OK)
+                    .entity(playlists)
+                    .build();
+        } catch (TokenInvalidException e) {
+            return Response
+                    .status(Response.Status.UNAUTHORIZED)
+                    .entity(HttpMessageConstants.NOT_AUTHORIZED)
+                    .build();
+        } catch (ServerErrorException e) {
+            return Response
+                    .status(Response.Status.INTERNAL_SERVER_ERROR)
+                    .entity(HttpMessageConstants.INTERNAL_SERVER_ERROR)
+                    .build();
+        }
+    }
+
+    @Override
+    public Response delete(String token, int playlistId) {
+        try {
+            userLogic.validateToken(token);
+            User user = userLogic.getUser(token);
+
+            JSONObject playlists = playlistLogic.deletePlaylist(user.getId(), playlistId);
+
+            return Response
+                    .status(Response.Status.OK)
+                    .entity(playlists)
+                    .build();
+        } catch (TokenInvalidException e) {
+            return Response
+                    .status(Response.Status.UNAUTHORIZED)
+                    .entity(HttpMessageConstants.NOT_AUTHORIZED)
+                    .build();
+        } catch (ServerErrorException e) {
+            return Response
+                    .status(Response.Status.INTERNAL_SERVER_ERROR)
+                    .entity(HttpMessageConstants.INTERNAL_SERVER_ERROR)
+                    .build();
+        }
     }
 
     @Override

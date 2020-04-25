@@ -79,8 +79,6 @@ public class TrackDao extends Database implements ITrackDao {
                         result.getString("description"),
                         result.getInt("offlineAvailable") == 1
                 ));
-
-                logger.log(Level.INFO, tracks.get(0).getPublicationDate());
             }
 
             return tracks;

@@ -1,5 +1,7 @@
 package com.thomas.spotitube.services.interfaces;
 
+import com.thomas.spotitube.domain.Playlist;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -9,11 +11,18 @@ import javax.ws.rs.core.Response;
 @Produces(MediaType.APPLICATION_JSON)
 public interface IPlaylistService {
     @GET
-    Response playlists(@QueryParam("token") String token);
+    Response get(@QueryParam("token") String token);
 
-    @GET
+    @POST
+    Response create(@QueryParam("token") String token, Playlist playlist);
+
+    @PUT
     @Path("{playlistId}")
-    Response playlist(@QueryParam("token") String token, @PathParam("playlistId") int playlistId);
+    Response update(@QueryParam("token") String token, Playlist playlist);
+
+    @DELETE
+    @Path("{playlistId}")
+    Response delete(@QueryParam("token") String token, @PathParam("playlistId") int playlistId);
 
     @GET
     @Path("{playlistId}/tracks")

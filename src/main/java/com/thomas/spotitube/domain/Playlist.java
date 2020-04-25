@@ -8,7 +8,7 @@ public class Playlist {
     private boolean owner;
     private ArrayList<Track> tracks;
 
-    public Playlist(int id, String name, boolean owner) {
+    public void setProperties(int id, String name, boolean owner) {
         this.id = id;
         this.name = name;
         this.owner = owner;

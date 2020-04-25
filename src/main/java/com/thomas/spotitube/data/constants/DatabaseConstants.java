@@ -11,7 +11,9 @@ public final class DatabaseConstants {
 
     // Playlist
     public static final String getPlaylists = "SELECT * FROM playlists";
-    public static final String getPlaylist = "SELECT * FROM playlists WHERE id = ?";
+    public static final String deletePlaylist = "DELETE FROM playlists WHERE id = ?";
+    public static final String addPlaylist = "INSERT INTO playlists (name, user_id) VALUES (?, ?)";
+    public static final String updatePlaylist= "UPDATE playlists SET name = ? WHERE id = ?";
 
     // Track
     public static final String getTracks = "SELECT * FROM tracks";
