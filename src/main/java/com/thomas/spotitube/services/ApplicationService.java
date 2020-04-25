@@ -1,7 +1,5 @@
 package com.thomas.spotitube.services;
 
-import com.thomas.spotitube.businesslogic.Credentials;
-
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 
