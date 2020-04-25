@@ -20,10 +20,12 @@ public class UserLogic implements IUserLogic {
      * Authenticate user
      *
      * @param credentials: Credentials
-     * @return User
+     * @return JSONObject
      *
-     * @throws UnauthorizedException
+     * @throws ForbiddenException
+     * @throws UserNotFoundException
      */
+    @Override
     public JSONObject authenticate(Credentials credentials) throws ForbiddenException, UserNotFoundException {
         if (!userDao.doesUserExist(credentials)) {
             throw new UserNotFoundException();
@@ -36,7 +38,7 @@ public class UserLogic implements IUserLogic {
         }
 
         JSONObject json = new JSONObject();
-        json.put("username", user.getUser());
+        json.put("user", user.getUser());
         json.put("token", user.getToken());
 
         return json;
@@ -47,11 +49,31 @@ public class UserLogic implements IUserLogic {
      *
      * @param token: String
      * @return void
+     *
      * @throws TokenInvalidException
      */
+    @Override
     public void validateToken(String token) throws TokenInvalidException {
         if (!userDao.doesTokenExist(token)) {
             throw new TokenInvalidException();
         }
+    }
+
+    /**
+     * Get user by token
+     *
+     * @param token: String
+     * @return User
+     * @throws TokenInvalidException
+     */
+    @Override
+    public User getUser(String token) throws TokenInvalidException {
+        User user = userDao.getUser(token);
+
+        if (user == null) {
+            throw new TokenInvalidException();
+        }
+
+        return user;
     }
 }

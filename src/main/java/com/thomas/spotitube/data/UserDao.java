@@ -17,6 +17,7 @@ public class UserDao extends Database implements IUserDao {
      * @param credentials: Credentials
      * @return User
      */
+    @Override
     public User authenticate(Credentials credentials) {
         String username = credentials.getUser();
         String password = credentials.getPassword();
@@ -26,7 +27,6 @@ public class UserDao extends Database implements IUserDao {
             preparedStatement.setString(1, username);
             preparedStatement.setString(2, password);
             ResultSet result = preparedStatement.executeQuery();
-
 
             if (result.next()) {
                 // Remove old token and set new one
@@ -49,11 +49,44 @@ public class UserDao extends Database implements IUserDao {
     }
 
     /**
+     * Get user by token
+     *
+     * @param token: String
+     * @return User
+     */
+    @Override
+    public User getUser(String token) {
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.getUser);
+            preparedStatement.setString(1, token);
+            ResultSet result = preparedStatement.executeQuery();
+
+            if (result.next()) {
+                User user = new User(
+                        result.getInt("id"),
+                        result.getString("username"),
+                        result.getString("token")
+                );
+
+                return user;
+            }
+
+            preparedStatement.close();
+
+            return null;
+        } catch (SQLException e) {
+            logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
+            return null;
+        }
+    }
+
+    /**
      * See if user exists with given username
      *
      * @param credentials: Credentials
      * @return boolean
      */
+    @Override
     public boolean doesUserExist(Credentials credentials) {
         String username = credentials.getUser();
 
@@ -78,6 +111,7 @@ public class UserDao extends Database implements IUserDao {
      * @param token: String
      * @return boolean
      */
+    @Override
     public boolean doesTokenExist(String token) {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.tokenExists);
