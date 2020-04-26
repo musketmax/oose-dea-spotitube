@@ -4,9 +4,8 @@ import com.thomas.spotitube.domain.Credentials;
 import com.thomas.spotitube.domain.User;
 
 public interface IUserDao {
-    User authenticate(Credentials credentials);
-    User getUser(String token);
-    boolean doesUserExist(Credentials credentials);
+    User getUserByUsername(String username);
+    User getUserByToken(String token);
     boolean doesTokenExist(String token);
 }
 

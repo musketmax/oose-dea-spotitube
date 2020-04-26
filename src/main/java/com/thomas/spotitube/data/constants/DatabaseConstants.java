@@ -3,7 +3,7 @@ package com.thomas.spotitube.data.constants;
 public final class DatabaseConstants {
     // Users
     public static final String getUser = "SELECT users.username, users.id, tokens.token FROM users INNER JOIN tokens ON users.id = tokens.user_id WHERE tokens.token = ?";
-    public static final String authenticateUser = "SELECT * FROM users WHERE username = ? AND password = ?";
+    public static final String getUserByUsername = "SELECT * FROM users WHERE username = ?";
     public static final String userExists = "SELECT username FROM users WHERE username = ?";
     public static final String removeToken = "DELETE FROM tokens WHERE user_id = ?";
     public static final String addToken = "INSERT INTO tokens (user_id, token) VALUES (?, ?)";
@@ -31,7 +31,7 @@ public final class DatabaseConstants {
             " FROM playlist_tracks_pivot\n" +
             " INNER JOIN tracks ON playlist_tracks_pivot.track_id = tracks.id\n" +
             "    INNER JOIN playlists ON playlist_tracks_pivot.playlist_id = playlists.id\n" +
-            " WHERE playlist_tracks_pivot.playlist_id = ? \n" +
+            " WHERE playlist_tracks_pivot.playlist_id = ?\n" +
             " ) GROUP BY tracks.id ORDER BY tracks.id";
     public static final String addTrackToPlaylist = "INSERT INTO playlist_tracks_pivot (playlist_id, track_id, offline_available) VALUES (?, ?, ?);";
     public static final String deleteTrackFromPlaylist = "DELETE FROM playlist_tracks_pivot WHERE playlist_id = ? AND track_id = ?";

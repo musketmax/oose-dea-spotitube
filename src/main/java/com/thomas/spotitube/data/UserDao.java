@@ -2,7 +2,6 @@ package com.thomas.spotitube.data;
 
 import com.thomas.spotitube.data.constants.DatabaseConstants;
 import com.thomas.spotitube.data.interfaces.IUserDao;
-import com.thomas.spotitube.domain.Credentials;
 import com.thomas.spotitube.domain.User;
 
 import java.sql.*;
@@ -12,20 +11,16 @@ import java.util.logging.Level;
 public class UserDao extends Database implements IUserDao {
 
     /**
-     * Authenticate user based on credentials
+     * Get Use by username
      *
-     * @param credentials: Credentials
+     * @param username: String
      * @return User
      */
     @Override
-    public User authenticate(Credentials credentials) {
-        String username = credentials.getUser();
-        String password = credentials.getPassword();
-
+    public User getUserByUsername(String username) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.authenticateUser);
+            PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.getUserByUsername);
             preparedStatement.setString(1, username);
-            preparedStatement.setString(2, password);
             ResultSet result = preparedStatement.executeQuery();
 
             if (result.next()) {
@@ -33,14 +28,20 @@ public class UserDao extends Database implements IUserDao {
                 removeToken(result.getInt("id"));
                 String token = addToken(result.getInt("id"));
 
-                return new User(
+                User user = new User(
                         result.getInt("id"),
                         result.getString("username"),
                         token
                 );
+
+                // Set password so we can check for the validation later
+                user.setPassword(result.getString("password"));
+
+                return user;
             }
 
             preparedStatement.close();
+
             return null;
         } catch (SQLException e) {
             logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
@@ -55,7 +56,7 @@ public class UserDao extends Database implements IUserDao {
      * @return User
      */
     @Override
-    public User getUser(String token) {
+    public User getUserByToken(String token) {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.getUser);
             preparedStatement.setString(1, token);
@@ -77,31 +78,6 @@ public class UserDao extends Database implements IUserDao {
         } catch (SQLException e) {
             logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
             return null;
-        }
-    }
-
-    /**
-     * See if user exists with given username
-     *
-     * @param credentials: Credentials
-     * @return boolean
-     */
-    @Override
-    public boolean doesUserExist(Credentials credentials) {
-        String username = credentials.getUser();
-
-        try {
-            PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.userExists);
-            preparedStatement.setString(1, username);
-            ResultSet resultSet = preparedStatement.executeQuery();
-
-            boolean result = resultSet.next();
-            preparedStatement.close();
-
-            return result;
-        } catch (SQLException e) {
-            logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
-            return false;
         }
     }
 

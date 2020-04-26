@@ -7,10 +7,12 @@ import com.thomas.spotitube.logic.interfaces.IUserLogic;
 import com.thomas.spotitube.data.interfaces.IUserDao;
 import com.thomas.spotitube.domain.Credentials;
 import com.thomas.spotitube.domain.User;
-import com.thomas.spotitube.exceptions.UnauthorizedException;
+import com.thomas.spotitube.utilities.PasswordHashing;
 import org.json.simple.JSONObject;
 
 import javax.inject.Inject;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 
 public class UserLogic implements IUserLogic {
     @Inject
@@ -26,14 +28,14 @@ public class UserLogic implements IUserLogic {
      * @throws UserNotFoundException
      */
     @Override
-    public JSONObject authenticate(Credentials credentials) throws ForbiddenException, UserNotFoundException {
-        if (!userDao.doesUserExist(credentials)) {
+    public JSONObject authenticate(Credentials credentials) throws ForbiddenException, UserNotFoundException, InvalidKeySpecException, NoSuchAlgorithmException {
+        User user = userDao.getUserByUsername(credentials.getUser());
+
+        if (user == null) {
             throw new UserNotFoundException();
         }
 
-        User user = userDao.authenticate(credentials);
-
-        if (user == null) {
+        if (!PasswordHashing.validatePassword(credentials.getPassword(), user.getPassword())) {
             throw new ForbiddenException();
         }
 
@@ -68,7 +70,7 @@ public class UserLogic implements IUserLogic {
      */
     @Override
     public User getUser(String token) throws TokenInvalidException {
-        User user = userDao.getUser(token);
+        User user = userDao.getUserByToken(token);
 
         if (user == null) {
             throw new TokenInvalidException();

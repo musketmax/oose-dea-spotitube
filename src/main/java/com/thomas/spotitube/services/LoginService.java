@@ -10,6 +10,8 @@ import org.json.simple.JSONObject;
 
 import javax.inject.Inject;
 import javax.ws.rs.core.Response;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 
 public class LoginService implements ILoginService {
     @Inject
@@ -33,6 +35,11 @@ public class LoginService implements ILoginService {
             return Response
                     .status(Response.Status.FORBIDDEN)
                     .entity(HttpMessageConstants.FORBIDDEN)
+                    .build();
+        } catch (InvalidKeySpecException | NoSuchAlgorithmException e) {
+            return Response
+                    .status(Response.Status.INTERNAL_SERVER_ERROR)
+                    .entity(HttpMessageConstants.INTERNAL_SERVER_ERROR)
                     .build();
         }
     }

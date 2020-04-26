@@ -4,6 +4,7 @@ public class User {
     private int id;
     private String user;
     private String token;
+    private String password;
 
     public User(int id, String user, String token) {
         this.id = id;
@@ -22,4 +23,12 @@ public class User {
     public void setToken() { this.token = token; }
 
     public String getToken() { return token; }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
