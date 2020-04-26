@@ -75,15 +75,17 @@ public class PlaylistDao extends Database implements IPlaylistDao {
     /**
      * Update playlist
      *
-     * @param userId: int
+     * @param userId:     int
+     * @param playlistId: int
+     * @param playlist:   Playlist
      * @return boolean
      */
     @Override
-    public boolean updatePlaylist(int userId, Playlist playlist) {
+    public boolean updatePlaylist(int userId, int playlistId, Playlist playlist) {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.updatePlaylist);
             preparedStatement.setString(1, playlist.getName());
-            preparedStatement.setInt(2, playlist.getId());
+            preparedStatement.setInt(2, playlistId);
             int result = preparedStatement.executeUpdate();
             preparedStatement.close();
 

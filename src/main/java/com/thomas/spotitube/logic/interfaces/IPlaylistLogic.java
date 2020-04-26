@@ -8,5 +8,5 @@ public interface IPlaylistLogic {
     JSONObject getPlaylistsForUser(int userId);
     JSONObject deletePlaylist(int userId, int playlistId) throws ServerErrorException;
     JSONObject addPlaylist(int userId, Playlist playlist) throws ServerErrorException;
-    JSONObject updatePlaylist(int userId, Playlist playlist) throws ServerErrorException;
+    JSONObject updatePlaylist(int userId, int playlistId, Playlist playlist) throws ServerErrorException;
 }

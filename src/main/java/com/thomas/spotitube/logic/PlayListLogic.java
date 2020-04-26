@@ -28,8 +28,7 @@ public class PlayListLogic implements IPlaylistLogic {
     @Override
     public JSONObject getPlaylistsForUser(int userId) {
         ArrayList<Playlist> playlists = this.playlistDao.getPlaylists(userId);
-        ArrayList<Track> tracks = this.trackDao.getTracksForPlaylists(playlists.stream().mapToInt(Playlist::getId).toArray());
-        int duration = getTotalDurationInSeconds(tracks.stream());
+        int duration = trackDao.getTotalDurationInSeconds(playlists.stream().mapToInt(Playlist::getId).toArray());
 
         JSONObject result = new JSONObject();
         result.put("playlists", playlists);
@@ -84,8 +83,8 @@ public class PlayListLogic implements IPlaylistLogic {
      * @throws ServerErrorException
      */
     @Override
-    public JSONObject updatePlaylist(int userId, Playlist playlist) throws ServerErrorException {
-        if (playlistDao.updatePlaylist(userId, playlist)) {
+    public JSONObject updatePlaylist(int userId, int playlistId, Playlist playlist) throws ServerErrorException {
+        if (playlistDao.updatePlaylist(userId, playlistId, playlist)) {
             return getPlaylistsForUser(userId);
         } else {
             throw new ServerErrorException();

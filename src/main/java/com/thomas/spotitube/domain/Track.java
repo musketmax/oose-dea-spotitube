@@ -13,7 +13,7 @@ public class Track {
     private String description;
     private boolean offlineAvailable;
 
-    public Track(
+    public void setProperties(
             int id,
             String title,
             String performer,
@@ -21,8 +21,7 @@ public class Track {
             String album,
             int playcount,
             Date publicationDate,
-            String description,
-            boolean offlineAvailable
+            String description
     ) {
         this.id = id;
         this.title = title;
@@ -32,7 +31,6 @@ public class Track {
         this.playcount = playcount;
         this.publicationDate = publicationDate;
         this.description = description;
-        this.offlineAvailable = offlineAvailable;
     }
 
     public int getId() {

@@ -9,13 +9,5 @@ import javax.ws.rs.core.Response;
 @Produces(MediaType.APPLICATION_JSON)
 public interface ITrackService {
     @GET
-    Response getTracks(@QueryParam("token") String token);
-
-    @GET
-    @Path("{ trackId }")
-    Response getTrack(@QueryParam("token") String token, @PathParam("trackId") int trackId);
-
-//    @PUT
-//    @Path("{ trackId }")
-//    Response updateTrack(@QueryParam("token") String token, @PathParam("trackId") int trackId);
+    Response get(@QueryParam("token") String token, @QueryParam("forPlaylist") int playlistId);
 }
