@@ -1,9 +1,7 @@
 package com.thomas.spotitube.services;
 
 import com.thomas.spotitube.data.constants.HttpMessageConstants;
-import com.thomas.spotitube.domain.User;
 import com.thomas.spotitube.exceptions.TokenInvalidException;
-import com.thomas.spotitube.logic.interfaces.IPlaylistLogic;
 import com.thomas.spotitube.logic.interfaces.ITrackLogic;
 import com.thomas.spotitube.logic.interfaces.IUserLogic;
 import com.thomas.spotitube.services.interfaces.ITrackService;

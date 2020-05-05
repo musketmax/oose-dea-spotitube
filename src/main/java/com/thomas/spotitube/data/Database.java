@@ -41,4 +41,8 @@ public abstract class Database implements IDatabase {
             logger.log(Level.SEVERE, "Error: cannot load driver " + singletonDatabaseProperties.driver(), e);
         }
     }
+
+    public String getQuery(String key) {
+        return singletonDatabaseProperties.getQuery(key);
+    }
 }

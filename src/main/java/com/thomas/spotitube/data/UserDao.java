@@ -19,7 +19,8 @@ public class UserDao extends Database implements IUserDao {
     @Override
     public User getUserByUsername(String username) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.getUserByUsername);
+            String query = getQuery(DatabaseConstants.GET_USER_BY_USERNAME);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, username);
             ResultSet result = preparedStatement.executeQuery();
 
@@ -58,7 +59,8 @@ public class UserDao extends Database implements IUserDao {
     @Override
     public User getUserByToken(String token) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.getUser);
+            String query = getQuery(DatabaseConstants.GET_USER);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, token);
             ResultSet result = preparedStatement.executeQuery();
 
@@ -90,7 +92,8 @@ public class UserDao extends Database implements IUserDao {
     @Override
     public boolean doesTokenExist(String token) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.tokenExists);
+            String query = getQuery(DatabaseConstants.TOKEN_EXISTS);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, token);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -112,8 +115,8 @@ public class UserDao extends Database implements IUserDao {
      */
     private void removeToken(int userId) {
         try {
-            Connection connection = DriverManager.getConnection(singletonDatabaseProperties.connectionString());
-            PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.removeToken);
+            String query = getQuery(DatabaseConstants.REMOVE_TOKEN);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, userId);
             preparedStatement.executeUpdate();
 
@@ -130,11 +133,11 @@ public class UserDao extends Database implements IUserDao {
      * @return void
      */
     private String addToken(int userId) {
-        final String token = UUID.randomUUID().toString();
-
         try {
-            Connection connection = DriverManager.getConnection(singletonDatabaseProperties.connectionString());
-            PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.addToken);
+            final String token = UUID.randomUUID().toString();
+            String query = getQuery(DatabaseConstants.ADD_TOKEN);
+
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, userId);
             preparedStatement.setString(2, token);
 

@@ -22,10 +22,12 @@ public class TrackDao extends Database implements ITrackDao {
     @Override
     public int getTotalDurationInSeconds(int[] playlistIds) {
         try {
+            String query = getQuery(DatabaseConstants.GET_TOTAL_TRACK_DURATION);
+
             // Convert list of playlist ID's to String and remove the array brackets on either side..
             String playlistIdSQLString = Arrays.toString(playlistIds).substring(1, Arrays.toString(playlistIds).length() - 1);
 
-            PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.getTotalTrackDuration);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, playlistIdSQLString);
             ResultSet result = preparedStatement.executeQuery();
 
@@ -49,7 +51,8 @@ public class TrackDao extends Database implements ITrackDao {
     @Override
     public ArrayList<Track> getTracksForPlaylist(int playlistId) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.getTracksForPlaylist);
+            String query = getQuery(DatabaseConstants.GET_TRACKS_FOR_PLAYLIST);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, playlistId);
             ResultSet result = preparedStatement.executeQuery();
 
@@ -75,7 +78,8 @@ public class TrackDao extends Database implements ITrackDao {
     @Override
     public ArrayList<Track> getAvailableTracksForPlaylist(int playlistId) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.getAvailableTracksForPlaylist);
+            String query = getQuery(DatabaseConstants.GET_AVAILABLE_TRACKS_FOR_PLAYLIST);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, playlistId);
             ResultSet result = preparedStatement.executeQuery();
 
@@ -102,7 +106,8 @@ public class TrackDao extends Database implements ITrackDao {
     @Override
     public boolean addTrackToPlaylist(int playlistId, Track track) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.addTrackToPlaylist);
+            String query = getQuery(DatabaseConstants.ADD_TRACK_TO_PLAYLIST);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, playlistId);
             preparedStatement.setInt(2, track.getId());
             preparedStatement.setInt(3, track.isOfflineAvailable() ? 1 : 0);
@@ -126,7 +131,8 @@ public class TrackDao extends Database implements ITrackDao {
     @Override
     public boolean deleteTrackFromPlaylist(int playlistId, int trackId) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.deleteTrackFromPlaylist);
+            String query = getQuery(DatabaseConstants.DELETE_TRACK_FROM_PLAYLIST);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, playlistId);
             preparedStatement.setInt(2, trackId);
             int result = preparedStatement.executeUpdate();

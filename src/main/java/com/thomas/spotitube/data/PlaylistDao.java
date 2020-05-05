@@ -22,7 +22,8 @@ public class PlaylistDao extends Database implements IPlaylistDao {
     @Override
     public ArrayList<Playlist> getPlaylists(int userId) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.getPlaylists);
+            String query = getQuery(DatabaseConstants.GET_PLAYLISTS);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
             ResultSet result = preparedStatement.executeQuery();
 
             ArrayList<Playlist> playlists = new ArrayList<Playlist>();
@@ -59,7 +60,8 @@ public class PlaylistDao extends Database implements IPlaylistDao {
     @Override
     public boolean addPlaylist(int userId, JSONObject playlist) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.addPlaylist);
+            String query = getQuery(DatabaseConstants.ADD_PLAYLIST);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, playlist.get("name").toString());
             preparedStatement.setString(2, playlist.get("user_id").toString());
             int result = preparedStatement.executeUpdate();
@@ -83,7 +85,8 @@ public class PlaylistDao extends Database implements IPlaylistDao {
     @Override
     public boolean updatePlaylist(int userId, int playlistId, Playlist playlist) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.updatePlaylist);
+            String query = getQuery(DatabaseConstants.UPDATE_PLAYLIST);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, playlist.getName());
             preparedStatement.setInt(2, playlistId);
             int result = preparedStatement.executeUpdate();
@@ -105,7 +108,8 @@ public class PlaylistDao extends Database implements IPlaylistDao {
     @Override
     public boolean deletePlaylist(int playlistId) {
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(DatabaseConstants.deletePlaylist);
+            String query = getQuery(DatabaseConstants.DELETE_PLAYLIST);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, playlistId);
             int result = preparedStatement.executeUpdate();
             preparedStatement.close();

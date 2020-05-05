@@ -38,4 +38,8 @@ public class SingletonDatabaseProperties {
     {
         return props.getProperty("connectionString");
     }
+
+    public String getQuery(String key) {
+        return props.getProperty(key);
+    }
 }

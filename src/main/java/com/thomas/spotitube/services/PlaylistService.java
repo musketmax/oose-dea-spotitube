@@ -54,7 +54,7 @@ public class PlaylistService implements IPlaylistService {
             JSONObject playlists = playlistLogic.addPlaylist(user.getId(), playlist);
 
             return Response
-                    .status(Response.Status.OK)
+                    .status(Response.Status.CREATED)
                     .entity(playlists)
                     .build();
         } catch (TokenInvalidException e) {

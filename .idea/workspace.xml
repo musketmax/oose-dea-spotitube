@@ -7,21 +7,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c6c9cd7-8966-4cb7-95cb-676e205f0d2b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/utilities/PasswordHashing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_javax_ws_rs_api_2_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_external_aopalliance_repackaged_2_4_0_b34.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_external_javax_inject_2_4_0_b34.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_api_2_4_0_b34.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_locator_2_4_0_b34.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_hk2_utils_2_4_0_b34.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_osgi_resource_locator_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_bundles_repackaged_jersey_guava_2_22_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_common_2_22_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_18_1_GA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/ApplicationServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/LoginServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/PLaylistLogicTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/PlaylistServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/TrackLogicTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/TrackServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/UserLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/spotitube_api_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/spotitube_api_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jakewharton_android_repackaged_dalvik_dx_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jakewharton_android_repackaged_libcore_dex_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_android_1_10_5.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spotitube-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spotitube-api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/data/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/data/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/data/PlaylistDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/data/PlaylistDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/data/TrackDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/data/TrackDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/data/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/data/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/data/constants/DatabaseConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/data/constants/DatabaseConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/data/interfaces/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/data/interfaces/IUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/logic/UserLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/logic/UserLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/logic/interfaces/IUserLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/logic/interfaces/IUserLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/services/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/services/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/TrackDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/TrackDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/constants/DatabaseConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/constants/DatabaseConstants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/classes/com/thomas/spotitube/data/TrackDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/classes/com/thomas/spotitube/data/TrackDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/classes/com/thomas/spotitube/data/constants/DatabaseConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/classes/com/thomas/spotitube/data/constants/DatabaseConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/data/constants/HttpMessageConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/data/constants/HttpMessageConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/data/properties/SingletonDatabaseProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/data/properties/SingletonDatabaseProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/services/ApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/services/ApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/services/PlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/services/PlaylistService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/services/TrackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/services/TrackService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/constants/HttpMessageConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/constants/HttpMessageConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/services/ApplicationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/services/ApplicationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/services/PlaylistService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/services/PlaylistService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/services/TrackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/services/TrackService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/classes/com/thomas/spotitube/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/classes/com/thomas/spotitube/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/classes/com/thomas/spotitube/data/constants/HttpMessageConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/classes/com/thomas/spotitube/data/constants/HttpMessageConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/classes/com/thomas/spotitube/services/ApplicationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/classes/com/thomas/spotitube/services/ApplicationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/classes/com/thomas/spotitube/services/PlaylistService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/classes/com/thomas/spotitube/services/PlaylistService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/classes/com/thomas/spotitube/services/TrackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/classes/com/thomas/spotitube/services/TrackService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/lib/byte-buddy-1.10.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/lib/byte-buddy-agent-1.10.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/lib/byte-buddy-android-1.10.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/lib/dalvik-dx-1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/lib/libcore-dex-2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/lib/mockito-core-3.3.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/spotitube-api-1.0-SNAPSHOT/WEB-INF/lib/objenesis-2.6.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +115,9 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.thomas.spotitube" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
     </key>
@@ -90,6 +137,14 @@
         <option name="BuildArtifacts" enabled="true">
           <artifact name="spotitube-api:war" />
         </option>
+      </method>
+    </configuration>
+    <configuration name="All in spotitube-api" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spotitube-api" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="TomEE 9.0.30" type="TomeeConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="TomEE 9.0.30" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -266,10 +321,12 @@
     </configuration>
     <list>
       <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.All in spotitube-api" />
       <item itemvalue="TomEE Server.TomEE 9.0.30" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in spotitube-api" />
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
@@ -312,7 +369,8 @@
       <workItem from="1587567019842" duration="17180000" />
       <workItem from="1587821108775" duration="501000" />
       <workItem from="1587821699814" duration="23184000" />
-      <workItem from="1587902373705" duration="1419000" />
+      <workItem from="1587902373705" duration="4598000" />
+      <workItem from="1588690811703" duration="1707000" />
     </task>
     <servers />
   </component>
@@ -336,10 +394,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="439" y="216" key="#Web_Browsers/0.23.1680.1027@0.23.1680.1027" timestamp="1587569577800" />
-    <state x="304" y="198" width="1071" height="705" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587667815380">
+    <state x="304" y="198" width="1071" height="705" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587906378153">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="304" y="198" width="1071" height="705" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1587667815380" />
+    <state x="304" y="198" width="1071" height="705" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1587906378153" />
     <state x="627" y="262" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1587569542798">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -348,6 +406,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="653" y="253" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1587859117376" />
+    <state x="577" y="341" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587906376100">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="577" y="341" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1587906376100" />
     <state x="454" y="232" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1587568878950">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -364,6 +426,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="313" y="469" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1587821413096" />
+    <state x="596" y="403" width="487" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587906130599">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="596" y="403" width="487" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1680.1027@0.23.1680.1027" timestamp="1587906130599" />
     <state x="393" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587578525339">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -376,70 +442,70 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="661" y="436" key="#com.intellij.ws.actions.GenerateJavaFromWsdlDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1587568855197" />
-    <state width="1382" height="181" key="GridCell.Tab.0.bottom" timestamp="1587903944757">
+    <state width="1382" height="343" key="GridCell.Tab.0.bottom" timestamp="1588692325648">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="181" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1587903944757" />
-    <state width="1382" height="181" key="GridCell.Tab.0.center" timestamp="1587903944755">
+    <state width="1382" height="343" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1588692325648" />
+    <state width="1382" height="343" key="GridCell.Tab.0.center" timestamp="1588692325647">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="181" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1587903944755" />
-    <state width="1382" height="181" key="GridCell.Tab.0.left" timestamp="1587903944754">
+    <state width="1382" height="343" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1588692325647" />
+    <state width="1382" height="343" key="GridCell.Tab.0.left" timestamp="1588692325646">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="181" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1587903944754" />
-    <state width="1382" height="181" key="GridCell.Tab.0.right" timestamp="1587903944755">
+    <state width="1382" height="343" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1588692325646" />
+    <state width="1382" height="343" key="GridCell.Tab.0.right" timestamp="1588692325647">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="181" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1587903944755" />
-    <state width="1382" height="181" key="GridCell.Tab.1.bottom" timestamp="1587903944556">
+    <state width="1382" height="343" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1588692325647" />
+    <state width="1382" height="343" key="GridCell.Tab.1.bottom" timestamp="1588692325350">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="181" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1587903944556" />
-    <state width="1382" height="181" key="GridCell.Tab.1.center" timestamp="1587903944555">
+    <state width="1382" height="343" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1588692325350" />
+    <state width="1382" height="343" key="GridCell.Tab.1.center" timestamp="1588692325348">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="181" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1587903944555" />
-    <state width="1382" height="181" key="GridCell.Tab.1.left" timestamp="1587903944555">
+    <state width="1382" height="343" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1588692325348" />
+    <state width="1382" height="343" key="GridCell.Tab.1.left" timestamp="1588692325348">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="181" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1587903944555" />
-    <state width="1382" height="181" key="GridCell.Tab.1.right" timestamp="1587903944556">
+    <state width="1382" height="343" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1588692325348" />
+    <state width="1382" height="343" key="GridCell.Tab.1.right" timestamp="1588692325350">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="181" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1587903944556" />
-    <state width="1382" height="181" key="GridCell.Tab.2.bottom" timestamp="1587903944559">
+    <state width="1382" height="343" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1588692325350" />
+    <state width="1382" height="343" key="GridCell.Tab.2.bottom" timestamp="1588692325354">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="181" key="GridCell.Tab.2.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1587903944559" />
-    <state width="1382" height="181" key="GridCell.Tab.2.center" timestamp="1587903944558">
+    <state width="1382" height="343" key="GridCell.Tab.2.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1588692325354" />
+    <state width="1382" height="343" key="GridCell.Tab.2.center" timestamp="1588692325351">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="181" key="GridCell.Tab.2.center/0.23.1680.1027@0.23.1680.1027" timestamp="1587903944558" />
-    <state width="1382" height="181" key="GridCell.Tab.2.left" timestamp="1587903944558">
+    <state width="1382" height="343" key="GridCell.Tab.2.center/0.23.1680.1027@0.23.1680.1027" timestamp="1588692325351" />
+    <state width="1382" height="343" key="GridCell.Tab.2.left" timestamp="1588692325351">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="181" key="GridCell.Tab.2.left/0.23.1680.1027@0.23.1680.1027" timestamp="1587903944558" />
-    <state width="1382" height="181" key="GridCell.Tab.2.right" timestamp="1587903944559">
+    <state width="1382" height="343" key="GridCell.Tab.2.left/0.23.1680.1027@0.23.1680.1027" timestamp="1588692325351" />
+    <state width="1382" height="343" key="GridCell.Tab.2.right" timestamp="1588692325354">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="181" key="GridCell.Tab.2.right/0.23.1680.1027@0.23.1680.1027" timestamp="1587903944559" />
-    <state width="1382" height="181" key="GridCell.Tab.3.bottom" timestamp="1587903944558">
+    <state width="1382" height="343" key="GridCell.Tab.2.right/0.23.1680.1027@0.23.1680.1027" timestamp="1588692325353" />
+    <state width="1382" height="343" key="GridCell.Tab.3.bottom" timestamp="1588692325360">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="181" key="GridCell.Tab.3.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1587903944558" />
-    <state width="1382" height="181" key="GridCell.Tab.3.center" timestamp="1587903944557">
+    <state width="1382" height="343" key="GridCell.Tab.3.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1588692325360" />
+    <state width="1382" height="343" key="GridCell.Tab.3.center" timestamp="1588692325359">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="181" key="GridCell.Tab.3.center/0.23.1680.1027@0.23.1680.1027" timestamp="1587903944557" />
-    <state width="1382" height="181" key="GridCell.Tab.3.left" timestamp="1587903944556">
+    <state width="1382" height="343" key="GridCell.Tab.3.center/0.23.1680.1027@0.23.1680.1027" timestamp="1588692325359" />
+    <state width="1382" height="343" key="GridCell.Tab.3.left" timestamp="1588692325358">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="181" key="GridCell.Tab.3.left/0.23.1680.1027@0.23.1680.1027" timestamp="1587903944556" />
-    <state width="1382" height="181" key="GridCell.Tab.3.right" timestamp="1587903944557">
+    <state width="1382" height="343" key="GridCell.Tab.3.left/0.23.1680.1027@0.23.1680.1027" timestamp="1588692325358" />
+    <state width="1382" height="343" key="GridCell.Tab.3.right" timestamp="1588692325359">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="181" key="GridCell.Tab.3.right/0.23.1680.1027@0.23.1680.1027" timestamp="1587903944557" />
+    <state width="1382" height="343" key="GridCell.Tab.3.right/0.23.1680.1027@0.23.1680.1027" timestamp="1588692325359" />
     <state x="328" y="118" key="SettingsEditor" timestamp="1587848521649">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -452,17 +518,20 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="578" y="307" key="extract.method.dialog/0.23.1680.1027@0.23.1680.1027" timestamp="1587843684704" />
-    <state x="498" y="172" width="683" height="729" key="find.popup" timestamp="1587858551057">
+    <state x="498" y="172" width="683" height="729" key="find.popup" timestamp="1588690993002">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="498" y="172" width="683" height="729" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1587858551057" />
+    <state x="498" y="172" width="683" height="729" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1588690993002" />
     <state x="602" y="160" key="refactoring.ChangeSignatureDialog" timestamp="1587842455525">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="602" y="160" key="refactoring.ChangeSignatureDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1587842455525" />
-    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1587842822846">
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1587904703999">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1587842822846" />
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1587904703999" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/spotitube_api$All_in_spotitube_api.ic" NAME="All in spotitube-api Coverage Results" MODIFIED="1587907192500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
