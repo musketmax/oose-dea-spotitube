@@ -5,6 +5,7 @@ import com.thomas.spotitube.data.interfaces.IPlaylistDao;
 import com.thomas.spotitube.domain.Playlist;
 import org.json.simple.JSONObject;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -22,6 +23,8 @@ public class PlaylistDao extends Database implements IPlaylistDao {
     @Override
     public ArrayList<Playlist> getPlaylists(int userId) {
         try {
+            Connection connection = getConnection();
+
             String query = getQuery(DatabaseConstants.GET_PLAYLISTS);
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             ResultSet result = preparedStatement.executeQuery();
@@ -42,6 +45,7 @@ public class PlaylistDao extends Database implements IPlaylistDao {
             }
 
             preparedStatement.close();
+            connection.close();
 
             return playlists;
         } catch (SQLException e) {
@@ -60,12 +64,16 @@ public class PlaylistDao extends Database implements IPlaylistDao {
     @Override
     public boolean addPlaylist(int userId, JSONObject playlist) {
         try {
+            Connection connection = getConnection();
+
             String query = getQuery(DatabaseConstants.ADD_PLAYLIST);
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, playlist.get("name").toString());
             preparedStatement.setString(2, playlist.get("user_id").toString());
             int result = preparedStatement.executeUpdate();
+
             preparedStatement.close();
+            connection.close();
 
             return result == 1;
         } catch (SQLException e) {
@@ -85,12 +93,16 @@ public class PlaylistDao extends Database implements IPlaylistDao {
     @Override
     public boolean updatePlaylist(int userId, int playlistId, Playlist playlist) {
         try {
+            Connection connection = getConnection();
+
             String query = getQuery(DatabaseConstants.UPDATE_PLAYLIST);
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, playlist.getName());
             preparedStatement.setInt(2, playlistId);
             int result = preparedStatement.executeUpdate();
+
             preparedStatement.close();
+            connection.close();
 
             return result == 1;
         } catch (SQLException e) {
@@ -108,11 +120,15 @@ public class PlaylistDao extends Database implements IPlaylistDao {
     @Override
     public boolean deletePlaylist(int playlistId) {
         try {
+            Connection connection = getConnection();
+
             String query = getQuery(DatabaseConstants.DELETE_PLAYLIST);
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, playlistId);
             int result = preparedStatement.executeUpdate();
+
             preparedStatement.close();
+            connection.close();
 
             return result == 1;
         } catch (SQLException e) {

@@ -4,38 +4,38 @@ import com.thomas.spotitube.data.constants.DatabaseConstants;
 import com.thomas.spotitube.data.interfaces.ITrackDao;
 import com.thomas.spotitube.domain.Track;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.logging.Level;
 
 public class TrackDao extends Database implements ITrackDao {
 
     /**
-     * Get all tracks which belong to playlists
+     * Get duration of tracks belonging to playlist
      *
-     * @param playlistIds: int[]
+     * @param playlistId: int
      * @return ArrayList<Track>
      */
     @Override
-    public int getTotalDurationInSeconds(int[] playlistIds) {
+    public int getTotalDurationInSeconds(int playlistId) {
         try {
+            Connection connection = getConnection();
+
             String query = getQuery(DatabaseConstants.GET_TOTAL_TRACK_DURATION);
-
-            // Convert list of playlist ID's to String and remove the array brackets on either side..
-            String playlistIdSQLString = Arrays.toString(playlistIds).substring(1, Arrays.toString(playlistIds).length() - 1);
-
             PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, playlistIdSQLString);
+            preparedStatement.setInt(1, playlistId);
             ResultSet result = preparedStatement.executeQuery();
 
+            int duration = 0;
+
             if (result.next()) {
-                return result.getInt("duration");
+                duration = result.getInt("duration");
             }
 
-            return 0;
+            preparedStatement.close();
+            connection.close();
+
+            return duration;
         } catch (SQLException e) {
             logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
             return 0;
@@ -51,6 +51,8 @@ public class TrackDao extends Database implements ITrackDao {
     @Override
     public ArrayList<Track> getTracksForPlaylist(int playlistId) {
         try {
+            Connection connection = getConnection();
+
             String query = getQuery(DatabaseConstants.GET_TRACKS_FOR_PLAYLIST);
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, playlistId);
@@ -61,6 +63,9 @@ public class TrackDao extends Database implements ITrackDao {
             while (result.next()) {
                 tracks.add(makeNewTrack(result, true));
             }
+
+            preparedStatement.close();
+            connection.close();
 
             return tracks;
         } catch (SQLException e) {
@@ -78,6 +83,8 @@ public class TrackDao extends Database implements ITrackDao {
     @Override
     public ArrayList<Track> getAvailableTracksForPlaylist(int playlistId) {
         try {
+            Connection connection = getConnection();
+
             String query = getQuery(DatabaseConstants.GET_AVAILABLE_TRACKS_FOR_PLAYLIST);
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, playlistId);
@@ -88,6 +95,9 @@ public class TrackDao extends Database implements ITrackDao {
             while (result.next()) {
                 tracks.add(makeNewTrack(result, false));
             }
+
+            preparedStatement.close();
+            connection.close();
 
             return tracks;
         } catch (SQLException e) {
@@ -106,13 +116,17 @@ public class TrackDao extends Database implements ITrackDao {
     @Override
     public boolean addTrackToPlaylist(int playlistId, Track track) {
         try {
+            Connection connection = getConnection();
+
             String query = getQuery(DatabaseConstants.ADD_TRACK_TO_PLAYLIST);
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, playlistId);
             preparedStatement.setInt(2, track.getId());
             preparedStatement.setInt(3, track.isOfflineAvailable() ? 1 : 0);
             int result = preparedStatement.executeUpdate();
+
             preparedStatement.close();
+            connection.close();
 
             return result == 1;
         } catch (SQLException e) {
@@ -131,12 +145,16 @@ public class TrackDao extends Database implements ITrackDao {
     @Override
     public boolean deleteTrackFromPlaylist(int playlistId, int trackId) {
         try {
+            Connection connection = getConnection();
+
             String query = getQuery(DatabaseConstants.DELETE_TRACK_FROM_PLAYLIST);
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, playlistId);
             preparedStatement.setInt(2, trackId);
             int result = preparedStatement.executeUpdate();
+
             preparedStatement.close();
+            connection.close();
 
             return result == 1;
         } catch (SQLException e) {

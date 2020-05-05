@@ -19,6 +19,8 @@ public class UserDao extends Database implements IUserDao {
     @Override
     public User getUserByUsername(String username) {
         try {
+            Connection connection = getConnection();
+
             String query = getQuery(DatabaseConstants.GET_USER_BY_USERNAME);
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, username);
@@ -42,6 +44,7 @@ public class UserDao extends Database implements IUserDao {
             }
 
             preparedStatement.close();
+            connection.close();
 
             return null;
         } catch (SQLException e) {
@@ -59,6 +62,8 @@ public class UserDao extends Database implements IUserDao {
     @Override
     public User getUserByToken(String token) {
         try {
+            Connection connection = getConnection();
+
             String query = getQuery(DatabaseConstants.GET_USER);
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, token);
@@ -75,6 +80,7 @@ public class UserDao extends Database implements IUserDao {
             }
 
             preparedStatement.close();
+            connection.close();
 
             return null;
         } catch (SQLException e) {
@@ -92,6 +98,8 @@ public class UserDao extends Database implements IUserDao {
     @Override
     public boolean doesTokenExist(String token) {
         try {
+            Connection connection = getConnection();
+
             String query = getQuery(DatabaseConstants.TOKEN_EXISTS);
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, token);
@@ -99,6 +107,7 @@ public class UserDao extends Database implements IUserDao {
 
             boolean result = resultSet.next();
             preparedStatement.close();
+            connection.close();
 
             return result;
         } catch (SQLException e) {
@@ -115,12 +124,15 @@ public class UserDao extends Database implements IUserDao {
      */
     private void removeToken(int userId) {
         try {
+            Connection connection = getConnection();
+
             String query = getQuery(DatabaseConstants.REMOVE_TOKEN);
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, userId);
             preparedStatement.executeUpdate();
 
             preparedStatement.close();
+            connection.close();
         } catch (SQLException e) {
             logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
         }
@@ -134,6 +146,8 @@ public class UserDao extends Database implements IUserDao {
      */
     private String addToken(int userId) {
         try {
+            Connection connection = getConnection();
+
             final String token = UUID.randomUUID().toString();
             String query = getQuery(DatabaseConstants.ADD_TOKEN);
 
@@ -143,6 +157,7 @@ public class UserDao extends Database implements IUserDao {
 
             preparedStatement.executeUpdate();
             preparedStatement.close();
+            connection.close();
 
             return token;
         } catch (SQLException e) {

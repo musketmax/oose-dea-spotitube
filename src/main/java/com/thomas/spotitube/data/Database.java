@@ -12,14 +12,12 @@ import java.util.logging.Logger;
 public abstract class Database implements IDatabase {
     protected Logger logger;
     protected SingletonDatabaseProperties singletonDatabaseProperties;
-    protected Connection connection;
 
     public Database() {
         logger = Logger.getLogger(getClass().getName());
         singletonDatabaseProperties = SingletonDatabaseProperties.getInstance();
 
         loadDriver(singletonDatabaseProperties);
-        connection = getConnection();
     }
 
     public Connection getConnection() {

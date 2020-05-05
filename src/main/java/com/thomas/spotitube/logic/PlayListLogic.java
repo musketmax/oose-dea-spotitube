@@ -14,7 +14,8 @@ import java.util.stream.Stream;
 
 public class PlayListLogic implements IPlaylistLogic {
     @Inject
-    private IPlaylistDao playlistDao;
+    private IPlaylistDao playlistDao;r
+    gi
 
     @Inject
     private ITrackDao trackDao;
@@ -28,7 +29,11 @@ public class PlayListLogic implements IPlaylistLogic {
     @Override
     public JSONObject getPlaylistsForUser(int userId) {
         ArrayList<Playlist> playlists = this.playlistDao.getPlaylists(userId);
-        int duration = trackDao.getTotalDurationInSeconds(playlists.stream().mapToInt(Playlist::getId).toArray());
+        int duration = 0;
+
+        for (Playlist playlist : playlists) {
+            duration += trackDao.getTotalDurationInSeconds(playlist.getId());
+        }
 
         JSONObject result = new JSONObject();
         result.put("playlists", playlists);
@@ -89,15 +94,5 @@ public class PlayListLogic implements IPlaylistLogic {
         } else {
             throw new ServerErrorException();
         }
-    }
-
-    /**
-     * Calculate total duration of all the playlists
-     *
-     * @param tracks: Stream<Track>
-     * @return int
-     */
-    private int getTotalDurationInSeconds(Stream<Track> tracks) {
-        return tracks.mapToInt(Track::getDuration).sum();
     }
 }
