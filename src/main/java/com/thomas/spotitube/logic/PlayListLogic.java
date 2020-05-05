@@ -14,8 +14,7 @@ import java.util.stream.Stream;
 
 public class PlayListLogic implements IPlaylistLogic {
     @Inject
-    private IPlaylistDao playlistDao;r
-    gi
+    private IPlaylistDao playlistDao;
 
     @Inject
     private ITrackDao trackDao;
