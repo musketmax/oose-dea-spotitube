@@ -22,7 +22,7 @@ public class ApplicationServiceTest {
     }
 
     @Test
-    public void app() {
+    public void TestGoodResponseFromBaseEndpoint() {
         Response response = applicationService.app();
 
         assertNotNull(response);

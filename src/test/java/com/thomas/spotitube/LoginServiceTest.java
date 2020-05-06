@@ -52,7 +52,7 @@ public class LoginServiceTest {
     }
 
     @Test
-    public void login() throws UserNotFoundException, ForbiddenException, InvalidKeySpecException, NoSuchAlgorithmException {
+    public void TestLoginUserWithCredentials() throws UserNotFoundException, ForbiddenException, InvalidKeySpecException, NoSuchAlgorithmException {
         when(userLogic.authenticate(credentials)).thenReturn(user);
 
         Response response = loginService.login(credentials);

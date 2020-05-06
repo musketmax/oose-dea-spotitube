@@ -90,7 +90,7 @@ public class PLaylistLogicTest {
     }
 
     @Test
-    public void getPlaylistsForUser() {
+    public void TestGetAllPlaylistsForUser() {
         when(playlistDao.getPlaylists(userId)).thenReturn(playlists);
         when(trackDao.getTotalDurationInSeconds(playlists.get(0).getId())).thenReturn(5);
         when(trackDao.getTotalDurationInSeconds(playlists.get(1).getId())).thenReturn(10);
@@ -106,7 +106,7 @@ public class PLaylistLogicTest {
     }
 
     @Test
-    public void deletePlaylist() throws ServerErrorException {
+    public void TestDeletePlaylistForUser() throws ServerErrorException {
         when(playlistDao.deletePlaylist(playlists.get(0).getId())).thenReturn(true);
         when(playlistDao.getPlaylists(userId)).thenReturn(resultPlaylistsAfterDelete);
         when(trackDao.getTotalDurationInSeconds(playlists.get(1).getId())).thenReturn(10);
@@ -121,7 +121,7 @@ public class PLaylistLogicTest {
     }
 
     @Test
-    public void addPlaylist() throws ServerErrorException {
+    public void TestAddPlaylistForUser() throws ServerErrorException {
         JSONObject newPlaylistObject = new JSONObject();
         newPlaylistObject.put("name", newPLaylist.getName());
         newPlaylistObject.put("user_id", userId);
@@ -141,7 +141,7 @@ public class PLaylistLogicTest {
     }
 
     @Test
-    public void updatePlaylist() throws ServerErrorException {
+    public void TestUpdatePlaylistForUser() throws ServerErrorException {
         when(playlistDao.updatePlaylist(userId, updatePlaylist.getId(), updatePlaylist)).thenReturn(true);
         when(playlistDao.getPlaylists(userId)).thenReturn(resultPlaylistsAfterUpdate);
         when(trackDao.getTotalDurationInSeconds(resultPlaylistsAfterUpdate.get(0).getId())).thenReturn(5);

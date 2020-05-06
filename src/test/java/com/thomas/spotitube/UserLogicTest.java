@@ -53,7 +53,7 @@ public class UserLogicTest {
     }
 
     @Test
-    public void authenticate() throws UserNotFoundException, ForbiddenException, InvalidKeySpecException, NoSuchAlgorithmException {
+    public void TestUserIsAuthenticatedWithPasswordHashing() throws UserNotFoundException, ForbiddenException, InvalidKeySpecException, NoSuchAlgorithmException {
         when(userDao.getUserByUsername(user.getUser())).thenReturn(user);
 
         JSONObject result = userLogic.authenticate(credentials);
@@ -65,7 +65,7 @@ public class UserLogicTest {
     }
 
     @Test
-    public void validateToken() throws TokenInvalidException {
+    public void TestValidateToken() throws TokenInvalidException {
         when(userDao.doesTokenExist(token)).thenReturn(true);
 
         userLogic.validateToken(token);
@@ -74,7 +74,7 @@ public class UserLogicTest {
     }
 
     @Test
-    public void getUser() throws TokenInvalidException {
+    public void TestGetUserByToken() throws TokenInvalidException {
         when(userDao.getUserByToken(token)).thenReturn(user);
 
         User result = userLogic.getUser(token);
