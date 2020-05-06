@@ -20,6 +20,7 @@ import java.security.spec.InvalidKeySpecException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -56,6 +57,7 @@ public class LoginServiceTest {
 
         Response response = loginService.login(credentials);
 
+        verify(userLogic).authenticate(credentials);
         assertNotNull(response);
         assertEquals(200, response.getStatus());
     }

@@ -3,14 +3,12 @@ package com.thomas.spotitube.logic;
 import com.thomas.spotitube.data.interfaces.IPlaylistDao;
 import com.thomas.spotitube.data.interfaces.ITrackDao;
 import com.thomas.spotitube.domain.Playlist;
-import com.thomas.spotitube.domain.Track;
 import com.thomas.spotitube.exceptions.ServerErrorException;
 import com.thomas.spotitube.logic.interfaces.IPlaylistLogic;
 import org.json.simple.JSONObject;
 
 import javax.inject.Inject;
 import java.util.ArrayList;
-import java.util.stream.Stream;
 
 public class PlayListLogic implements IPlaylistLogic {
     @Inject
