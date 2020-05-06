@@ -7,13 +7,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c6c9cd7-8966-4cb7-95cb-676e205f0d2b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/logic/PlayListLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/logic/PlayListLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thomas/spotitube/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/ApplicationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/ApplicationServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/LoginServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/LoginServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spotitube-api.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/PlaylistDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/PlaylistDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/TrackDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/TrackDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/constants/DatabaseConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/constants/DatabaseConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/constants/HttpMessageConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/constants/HttpMessageConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/properties/SingletonDatabaseProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/data/properties/SingletonDatabaseProperties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/domain/Credentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/domain/Credentials.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/domain/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/domain/Playlist.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/domain/Track.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/domain/Track.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/exceptions/ForbiddenException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/exceptions/ForbiddenException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/exceptions/ServerErrorException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/exceptions/ServerErrorException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/exceptions/TokenInvalidException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/exceptions/TokenInvalidException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/exceptions/UnauthorizedException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/exceptions/UnauthorizedException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/exceptions/UserNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/exceptions/UserNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/logic/PlayListLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/logic/PlayListLogic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/logic/TrackLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/logic/TrackLogic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/logic/UserLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/logic/UserLogic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/services/PlaylistService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/services/PlaylistService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/services/TrackService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/services/TrackService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/utilities/PasswordHashing.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thomas/spotitube/utilities/PasswordHashing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/spotitube-api.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/ApplicationServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/ApplicationServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/LoginServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/LoginServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/PLaylistLogicTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/PLaylistLogicTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/PlaylistServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/PlaylistServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/TrackLogicTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/TrackLogicTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/TrackServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/TrackServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/UserLogicTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/UserLogicTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="282" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="spotitube-api" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -65,7 +107,7 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
     </key>
   </component>
-  <component name="RunManager" selected="TomEE Server.TomEE 9.0.30">
+  <component name="RunManager" selected="JUnit.com.thomas.spotitube in spotitube-api">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.thomas.spotitube.App" />
       <module name="spotitube-api" />
@@ -82,9 +124,34 @@
         </option>
       </method>
     </configuration>
-    <configuration name="All in spotitube-api" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Whole project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" track_test_folders="true">
+        <pattern>
+          <option name="PATTERN" value="com.thomas.spotitube.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.thomas.spotitube" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="PARAMETERS" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.thomas.spotitube in spotitube-api" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spotitube-api" />
-      <option name="PACKAGE_NAME" value="" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.thomas.spotitube.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.thomas.spotitube" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -264,12 +331,14 @@
     </configuration>
     <list>
       <item itemvalue="Application.App" />
-      <item itemvalue="JUnit.All in spotitube-api" />
+      <item itemvalue="JUnit.Whole project" />
       <item itemvalue="TomEE Server.TomEE 9.0.30" />
+      <item itemvalue="JUnit.com.thomas.spotitube in spotitube-api" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in spotitube-api" />
+        <item itemvalue="JUnit.com.thomas.spotitube in spotitube-api" />
+        <item itemvalue="JUnit.Whole project" />
         <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
@@ -313,7 +382,7 @@
       <workItem from="1587821108775" duration="501000" />
       <workItem from="1587821699814" duration="23184000" />
       <workItem from="1587902373705" duration="4598000" />
-      <workItem from="1588690811703" duration="5353000" />
+      <workItem from="1588690811703" duration="7781000" />
     </task>
     <servers />
   </component>
@@ -337,10 +406,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="439" y="216" key="#Web_Browsers/0.23.1680.1027@0.23.1680.1027" timestamp="1587569577800" />
-    <state x="304" y="198" width="1071" height="705" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587906378153">
+    <state x="304" y="198" width="1071" height="705" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588701560719">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="304" y="198" width="1071" height="705" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1587906378153" />
+    <state x="304" y="198" width="1071" height="705" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1588701560719" />
     <state x="627" y="262" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1587569542798">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -349,6 +418,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="653" y="253" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1587859117376" />
+    <state x="577" y="333" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1588701523053">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="577" y="333" key="#com.intellij.ide.util.PackageChooserDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1588701523053" />
     <state x="577" y="341" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587906376100">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -377,30 +450,30 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="393" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1587578525339" />
-    <state x="578" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587577962265">
+    <state x="578" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588701707524">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="578" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1587577962265" />
+    <state x="578" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1588701707524" />
     <state x="661" y="436" key="#com.intellij.ws.actions.GenerateJavaFromWsdlDialog" timestamp="1587568855197">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="661" y="436" key="#com.intellij.ws.actions.GenerateJavaFromWsdlDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1587568855197" />
-    <state width="1382" height="270" key="GridCell.Tab.0.bottom" timestamp="1588700651688">
+    <state width="1638" height="280" key="GridCell.Tab.0.bottom" timestamp="1588703447948">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="270" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1588700651688" />
-    <state width="1382" height="270" key="GridCell.Tab.0.center" timestamp="1588700651687">
+    <state width="1638" height="280" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1588703447948" />
+    <state width="1638" height="280" key="GridCell.Tab.0.center" timestamp="1588703447947">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="270" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1588700651687" />
-    <state width="1382" height="270" key="GridCell.Tab.0.left" timestamp="1588700651687">
+    <state width="1638" height="280" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1588703447947" />
+    <state width="1638" height="280" key="GridCell.Tab.0.left" timestamp="1588703447946">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="270" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1588700651687" />
-    <state width="1382" height="270" key="GridCell.Tab.0.right" timestamp="1588700651687">
+    <state width="1638" height="280" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1588703447946" />
+    <state width="1638" height="280" key="GridCell.Tab.0.right" timestamp="1588703447947">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1382" height="270" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1588700651687" />
+    <state width="1638" height="280" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1588703447947" />
     <state width="1382" height="270" key="GridCell.Tab.1.bottom" timestamp="1588700651689">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -469,12 +542,19 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="602" y="160" key="refactoring.ChangeSignatureDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1588699528055" />
+    <state x="505" y="248" key="run.anything.popup" timestamp="1588701481593">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="505" y="248" key="run.anything.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1588701481593" />
     <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1587904703999">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="505" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1587904703999" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/spotitube_api$com_thomas_spotitube_in_spotitube_api.ic" NAME="com.thomas.spotitube in spotitube-api Coverage Results" MODIFIED="1588703447919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.thomas.spotitube.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/spotitube_api$All_in_spotitube_api.ic" NAME="All in spotitube-api Coverage Results" MODIFIED="1587907192500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
