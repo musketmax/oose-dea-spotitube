@@ -7,6 +7,7 @@ import com.thomas.spotitube.exceptions.ForbiddenException;
 import com.thomas.spotitube.exceptions.TokenInvalidException;
 import com.thomas.spotitube.exceptions.UserNotFoundException;
 import com.thomas.spotitube.logic.UserLogic;
+import com.thomas.spotitube.utilities.PasswordHashing;
 import org.json.simple.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,8 +19,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -50,6 +50,18 @@ public class UserLogicTest {
     public void init() {
         assertNotNull(userLogic);
         assertNotNull(userDao);
+    }
+
+    @Test
+    public void TestPasswordHashing() throws InvalidKeySpecException, NoSuchAlgorithmException {
+        String originalPassword = "password";
+
+        String hashedPassword = PasswordHashing.generatePasswordHash(originalPassword);
+        boolean isValid = PasswordHashing.validatePassword(originalPassword, hashedPassword);
+        boolean isInvalid = PasswordHashing.validatePassword("faulty", hashedPassword);
+
+        assertTrue(isValid);
+        assertFalse(isInvalid);
     }
 
     @Test

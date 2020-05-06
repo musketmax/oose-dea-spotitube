@@ -8,17 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8c6c9cd7-8966-4cb7-95cb-676e205f0d2b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/ApplicationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/ApplicationServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/LoginServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/LoginServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/PLaylistLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/PLaylistLogicTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/PlaylistServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/PlaylistServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/TrackLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/TrackLogicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/TrackServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/TrackServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/UserLogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/thomas/spotitube/UserLogicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/ApplicationServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/ApplicationServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/LoginServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/LoginServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/PLaylistLogicTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/PLaylistLogicTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/PlaylistServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/PlaylistServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/TrackLogicTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/TrackLogicTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/TrackServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/TrackServiceTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/UserLogicTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/thomas/spotitube/UserLogicTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -357,7 +351,7 @@
       <workItem from="1587821108775" duration="501000" />
       <workItem from="1587821699814" duration="23184000" />
       <workItem from="1587902373705" duration="4598000" />
-      <workItem from="1588690811703" duration="16430000" />
+      <workItem from="1588690811703" duration="17315000" />
     </task>
     <servers />
   </component>
@@ -437,22 +431,22 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="661" y="436" key="#com.intellij.ws.actions.GenerateJavaFromWsdlDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1587568855197" />
-    <state width="1638" height="280" key="GridCell.Tab.0.bottom" timestamp="1588797323012">
+    <state width="1638" height="280" key="GridCell.Tab.0.bottom" timestamp="1588798173385">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1588797323012" />
-    <state width="1638" height="280" key="GridCell.Tab.0.center" timestamp="1588797323011">
+    <state width="1638" height="280" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1588798173385" />
+    <state width="1638" height="280" key="GridCell.Tab.0.center" timestamp="1588798173385">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1588797323011" />
-    <state width="1638" height="280" key="GridCell.Tab.0.left" timestamp="1588797323011">
+    <state width="1638" height="280" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1588798173385" />
+    <state width="1638" height="280" key="GridCell.Tab.0.left" timestamp="1588798173384">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1588797323011" />
-    <state width="1638" height="280" key="GridCell.Tab.0.right" timestamp="1588797323011">
+    <state width="1638" height="280" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1588798173384" />
+    <state width="1638" height="280" key="GridCell.Tab.0.right" timestamp="1588798173385">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1638" height="280" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1588797323011" />
+    <state width="1638" height="280" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1588798173385" />
     <state width="1382" height="270" key="GridCell.Tab.1.bottom" timestamp="1588700651689">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -531,7 +525,7 @@
     <state x="505" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1587904703999" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/spotitube_api$com_thomas_spotitube_in_spotitube_api.ic" NAME="com.thomas.spotitube in spotitube-api Coverage Results" MODIFIED="1588797322976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/spotitube_api$com_thomas_spotitube_in_spotitube_api.ic" NAME="com.thomas.spotitube in spotitube-api Coverage Results" MODIFIED="1588798173365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.thomas.spotitube.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/spotitube_api$All_in_spotitube_api.ic" NAME="All in spotitube-api Coverage Results" MODIFIED="1587907192500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

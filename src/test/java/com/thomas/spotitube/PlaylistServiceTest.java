@@ -153,6 +153,8 @@ public class PlaylistServiceTest {
     public void init() {
         assertNotNull(playlistService);
         assertNotNull(playListLogic);
+        assertNotNull(userLogic);
+        assertNotNull(trackLogic);
     }
 
     @Test
