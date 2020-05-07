@@ -49,7 +49,7 @@ public class PlaylistDao extends Database implements IPlaylistDao {
 
             return playlists;
         } catch (SQLException e) {
-            logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
+            logger.log(Level.SEVERE, "Database error: " + singletonDatabaseProperties.connectionString(), e);
             return null;
         }
     }
@@ -77,7 +77,7 @@ public class PlaylistDao extends Database implements IPlaylistDao {
 
             return result == 1;
         } catch (SQLException e) {
-            logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
+            logger.log(Level.SEVERE, "Database error: " + singletonDatabaseProperties.connectionString(), e);
             return false;
         }
     }
@@ -106,7 +106,7 @@ public class PlaylistDao extends Database implements IPlaylistDao {
 
             return result == 1;
         } catch (SQLException e) {
-            logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
+            logger.log(Level.SEVERE, "Database error: " + singletonDatabaseProperties.connectionString(), e);
             return false;
         }
     }
@@ -132,7 +132,7 @@ public class PlaylistDao extends Database implements IPlaylistDao {
 
             return result == 1;
         } catch (SQLException e) {
-            logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
+            logger.log(Level.SEVERE, "Database error: " + singletonDatabaseProperties.connectionString(), e);
             return false;
         }
     }

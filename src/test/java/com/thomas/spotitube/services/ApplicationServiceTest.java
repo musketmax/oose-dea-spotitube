@@ -1,4 +1,4 @@
-package com.thomas.spotitube;
+package com.thomas.spotitube.services;
 
 import com.thomas.spotitube.services.ApplicationService;
 import org.junit.Test;

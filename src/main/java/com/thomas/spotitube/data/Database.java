@@ -10,8 +10,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public abstract class Database implements IDatabase {
-    protected Logger logger;
-    protected SingletonDatabaseProperties singletonDatabaseProperties;
+    public Logger logger;
+    public SingletonDatabaseProperties singletonDatabaseProperties;
 
     public Database() {
         logger = Logger.getLogger(getClass().getName());
@@ -26,7 +26,7 @@ public abstract class Database implements IDatabase {
         try {
             connection = DriverManager.getConnection(singletonDatabaseProperties.connectionString());
         } catch (SQLException e) {
-            logger.log(Level.SEVERE, "MySQL error: cannot establish a connection.", e);
+            logger.log(Level.SEVERE, "Database error: cannot establish a connection.", e);
         }
 
         return connection;

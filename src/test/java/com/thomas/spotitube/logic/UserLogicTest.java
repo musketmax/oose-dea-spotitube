@@ -1,4 +1,4 @@
-package com.thomas.spotitube;
+package com.thomas.spotitube.logic;
 
 import com.thomas.spotitube.data.UserDao;
 import com.thomas.spotitube.domain.Credentials;

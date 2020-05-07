@@ -26,12 +26,14 @@ public class UserDao extends Database implements IUserDao {
             preparedStatement.setString(1, username);
             ResultSet result = preparedStatement.executeQuery();
 
+            User user = null;
+
             if (result.next()) {
                 // Remove old token and set new one
                 removeToken(result.getInt("id"));
                 String token = addToken(result.getInt("id"));
 
-                User user = new User(
+                user = new User(
                         result.getInt("id"),
                         result.getString("username"),
                         token
@@ -39,16 +41,14 @@ public class UserDao extends Database implements IUserDao {
 
                 // Set password so we can check for the validation later
                 user.setPassword(result.getString("password"));
-
-                return user;
             }
 
             preparedStatement.close();
             connection.close();
 
-            return null;
+            return user;
         } catch (SQLException e) {
-            logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
+            logger.log(Level.SEVERE, "Database error: " + singletonDatabaseProperties.connectionString(), e);
             return null;
         }
     }
@@ -69,22 +69,22 @@ public class UserDao extends Database implements IUserDao {
             preparedStatement.setString(1, token);
             ResultSet result = preparedStatement.executeQuery();
 
+            User user = null;
+
             if (result.next()) {
-                User user = new User(
+                user = new User(
                         result.getInt("id"),
                         result.getString("username"),
                         result.getString("token")
                 );
-
-                return user;
             }
 
             preparedStatement.close();
             connection.close();
 
-            return null;
+            return user;
         } catch (SQLException e) {
-            logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
+            logger.log(Level.SEVERE, "Database error: " + singletonDatabaseProperties.connectionString(), e);
             return null;
         }
     }
@@ -111,7 +111,7 @@ public class UserDao extends Database implements IUserDao {
 
             return result;
         } catch (SQLException e) {
-            logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
+            logger.log(Level.SEVERE, "Database error: " + singletonDatabaseProperties.connectionString(), e);
             return false;
         }
     }
@@ -122,7 +122,7 @@ public class UserDao extends Database implements IUserDao {
      * @param userId: int
      * @return void
      */
-    private void removeToken(int userId) {
+    public void removeToken(int userId) {
         try {
             Connection connection = getConnection();
 
@@ -134,7 +134,7 @@ public class UserDao extends Database implements IUserDao {
             preparedStatement.close();
             connection.close();
         } catch (SQLException e) {
-            logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
+            logger.log(Level.SEVERE, "Database error: " + singletonDatabaseProperties.connectionString(), e);
         }
     }
 
@@ -144,7 +144,7 @@ public class UserDao extends Database implements IUserDao {
      * @param userId: int
      * @return void
      */
-    private String addToken(int userId) {
+    public String addToken(int userId) {
         try {
             Connection connection = getConnection();
 
@@ -156,12 +156,13 @@ public class UserDao extends Database implements IUserDao {
             preparedStatement.setString(2, token);
 
             preparedStatement.executeUpdate();
+
             preparedStatement.close();
             connection.close();
 
             return token;
         } catch (SQLException e) {
-            logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
+            logger.log(Level.SEVERE, "Database error: " + singletonDatabaseProperties.connectionString(), e);
             return null;
         }
     }

@@ -37,7 +37,7 @@ public class TrackDao extends Database implements ITrackDao {
 
             return duration;
         } catch (SQLException e) {
-            logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
+            logger.log(Level.SEVERE, "Database error: " + singletonDatabaseProperties.connectionString(), e);
             return 0;
         }
     }
@@ -69,7 +69,7 @@ public class TrackDao extends Database implements ITrackDao {
 
             return tracks;
         } catch (SQLException e) {
-            logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
+            logger.log(Level.SEVERE, "Database error: " + singletonDatabaseProperties.connectionString(), e);
             return null;
         }
     }
@@ -101,7 +101,7 @@ public class TrackDao extends Database implements ITrackDao {
 
             return tracks;
         } catch (SQLException e) {
-            logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
+            logger.log(Level.SEVERE, "Database error: " + singletonDatabaseProperties.connectionString(), e);
             return null;
         }
     }
@@ -130,7 +130,7 @@ public class TrackDao extends Database implements ITrackDao {
 
             return result == 1;
         } catch (SQLException e) {
-            logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
+            logger.log(Level.SEVERE, "Database error: " + singletonDatabaseProperties.connectionString(), e);
             return false;
         }
     }
@@ -158,7 +158,7 @@ public class TrackDao extends Database implements ITrackDao {
 
             return result == 1;
         } catch (SQLException e) {
-            logger.log(Level.SEVERE, "MySQL error: " + singletonDatabaseProperties.connectionString(), e);
+            logger.log(Level.SEVERE, "Database error: " + singletonDatabaseProperties.connectionString(), e);
             return false;
         }
     }
@@ -169,7 +169,7 @@ public class TrackDao extends Database implements ITrackDao {
      * @param result: ResultSet
      * @return Track
      */
-    private Track makeNewTrack(ResultSet result, boolean includeOfflineAvailable) throws SQLException {
+    public Track makeNewTrack(ResultSet result, boolean includeOfflineAvailable) throws SQLException {
         Track track = new Track();
         track.setProperties(
                 result.getInt("id"),

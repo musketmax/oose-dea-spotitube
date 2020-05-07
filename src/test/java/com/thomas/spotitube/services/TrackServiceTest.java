@@ -1,4 +1,4 @@
-package com.thomas.spotitube;
+package com.thomas.spotitube.services;
 
 import com.thomas.spotitube.domain.Playlist;
 import com.thomas.spotitube.domain.Track;

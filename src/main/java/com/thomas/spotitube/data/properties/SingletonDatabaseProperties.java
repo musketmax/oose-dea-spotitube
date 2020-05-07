@@ -9,16 +9,13 @@ import java.util.logging.Logger;
 public class SingletonDatabaseProperties {
     private Properties props;
     private static SingletonDatabaseProperties instance;
+    private Logger logger;
 
     private SingletonDatabaseProperties() {
-        Logger logger = Logger.getLogger(getClass().getName());
+        logger = Logger.getLogger(getClass().getName());
         props = new Properties();
 
-        try {
-            props.load(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("database.properties")));
-        } catch (IOException exception) {
-            logger.log(Level.SEVERE, "-- Error: cannot find database configuration!", exception);
-        }
+        loadProperties();
     }
 
     public static SingletonDatabaseProperties getInstance() {
@@ -41,5 +38,13 @@ public class SingletonDatabaseProperties {
 
     public String getQuery(String key) {
         return props.getProperty(key);
+    }
+
+    public void loadProperties() {
+        try {
+            props.load(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("database.properties")));
+        } catch (IOException exception) {
+            logger.log(Level.SEVERE, "-- Error: cannot find database configuration!", exception);
+        }
     }
 }

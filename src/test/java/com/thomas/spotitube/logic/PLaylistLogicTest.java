@@ -1,4 +1,4 @@
-package com.thomas.spotitube;
+package com.thomas.spotitube.logic;
 
 import com.thomas.spotitube.data.PlaylistDao;
 import com.thomas.spotitube.data.TrackDao;
